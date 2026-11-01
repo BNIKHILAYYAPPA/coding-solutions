@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int no;
+    cin>>no;
+    while(no){
+        int mem,pr;
+        cin>>mem>>pr;
+        int op=ceil((float)mem/6);
+        cout<<pr*op<<"\n";
+        no--;
+    }
+    return 0;
+}
