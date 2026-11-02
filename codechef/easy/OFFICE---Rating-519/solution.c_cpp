@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int x;
+    cin>>x;
+    int i=0;
+    while(i<x){
+        int a,b,c;
+        cin>>a>>b>>c;
+        double per = (double)c / (a*b) * 100;
+        if(per>50){
+            cout<<"Yes\n";
+        }
+        else{
+            cout<<"No\n";
+        }
+        i++;
+    }
+}
