@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    while(n--){
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+        int max=0;
+        if(a>(b+c+d)){
+            cout<<"YES\n";
+        }
+        else if(b>(a+c+d)){
+            cout<<"YES\n";
+        }
+        else if(c>(a+b+d)){
+            cout<<"YES\n";
+        }
+        else if(d>(a+c+b)){
+            cout<<"YES\n";
+        }
+        else{
+            cout<<"NO\n";
+        }
+    }
+    return 0;
+}
