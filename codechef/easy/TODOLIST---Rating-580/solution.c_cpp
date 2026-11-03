@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    while(n--){
+        int p,i=0;
+        cin>>p;
+        while(p--){
+            int a;
+            cin>>a;
+            if(a>=1000){
+                i++;
+            }
+        }
+        cout<<i<<"\n";
+    }
+    return 0;
+}
