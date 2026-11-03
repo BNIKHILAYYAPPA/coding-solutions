@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    int e,o;
+    while(n--){
+        int s;
+        cin>>s;
+        if(s%2==0){
+            e++;
+        }
+        else{
+            o++;
+        }
+    }
+    if(e>o){
+        cout<<"READY FOR BATTLE";
+    }
+    else{
+        cout<<"NOT READY";
+    }
+    return 0;
+}
