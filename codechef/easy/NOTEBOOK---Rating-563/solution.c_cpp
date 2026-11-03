@@ -8,7 +8,7 @@ int main() {
     while(n--){
         int a;
         cin>>a;
-        cout<<15*a<<"\n";
+        cout<<a*10<<"\n";
     }
     return 0;
 }
