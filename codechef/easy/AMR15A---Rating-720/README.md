@@ -118,7 +118,7 @@ NOT READY
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T10:41:42.404Z  
+**Submitted:** 2026-11-03T10:43:48.443Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -128,7 +128,7 @@ int main() {
 	// your code goes here
     int n;
     cin>>n;
-    int e,o;
+    int e=0,o=0;
     while(n--){
         int s;
         cin>>s;
