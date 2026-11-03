@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n,r;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int a,b;
+        cin>>a>>b;
+        r=(a*4)+b;
+        cout<<r<<"\n";
+    }
+     return 0;   
+}
