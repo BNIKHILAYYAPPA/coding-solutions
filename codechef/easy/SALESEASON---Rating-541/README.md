@@ -4,68 +4,60 @@
 
 ## Problem
 
-### Water Filling
+### Sale Season
 
-Chef has three water bottles. At any point, if at least two of them are empty, she will fill them up. But if at most one bottle is empty, she will wait, and not fill them up now.
+It's the sale season again and Chef bought items worth a total of $X$ rupees. The sale season offer is as follows:
 
-You are given three integers - $B_1, B_2,$ and $B_3$.
-If $B_1 = 1$, it means that the first bottle is full.
-If $B_1 = 0$, it means that the first bottle is empty.
-Similarly, $B_2$ denotes whether the second bottle is full or empty, and $B_3$ denotes it for the third bottle.
+- if $X \le 100$, no discount.
+- if $100 \lt X \le 1000$, discount is $25$ rupees.
+- if $1000 \lt X \le 5000$, discount is $100$ rupees.
+- if $X \gt 5000$, discount is $500$ rupees.
 
-Output "Water filling time", if Chef has to fill the bottles now. If not, output "Not now".
+Find the final amount Chef needs to pay for his shopping.
 
 ### Input Format
 - The first line of input will contain a single integer $T$, denoting the number of test cases.
-- The only line of each test case contains three space-separated integers, $B_1, B_2, B_3$.
+- Each test case consists of single line of input containing an integer $X$.
 ### Output Format
 
-For each test case, output on a new line, either "Water filling time", or "Not now".
+For each test case, output on a new line the final amount Chef needs to pay for his shopping.
 
 ### Constraints
-- $1 \leq T \leq 1000$
-- $B_i$ is either $0$ or $1$
+- $1 \leq T \leq 100$
+- $1 \leq X \leq 10000$
 ### Sample 1:
 Input
 Output
 
 ```
-5
-0 0 0
-1 1 1
-1 1 0
-0 1 0
-0 1 1
+4
+15
+70
+250
+1000
 
 ```
 
 ```
-Water filling time
-Not now
-Not now
-Water filling time
-Not now
+15
+70
+225
+975
 
 ```
 
 ### Explanation:
 
- **Testcase 1:**  The inputs are $0, 0, 0$. So all three bottles are empty. Since at least two bottles are empty, it is "Water filling time".
+ **Test case $1$:**  Since $X \le 100$, there is no discount.
 
- **Testcase 2:**  The inputs are $1, 1, 1$. So all three bottles are full. Since it is not the case that at least two bottles are empty, it is "Not now".
-
- **Testcase 3:**  The inputs are $1, 1, 0$. So only one bottle is empty. Since it is not the case that at least two bottles are empty, it is "Not now".
-
- **Testcase 4:**  The inputs are $0, 1, 0$. So two bottles are empty. Since at least two bottles are empty, it is "Water filling time".
-
- **Testcase 5:**  The inputs are $0, 1, 1$. So only one bottle is empty. Since it is not the case that at least two bottles are empty, it is "Not now".
+ **Test case $3$:**  Here, $X = 250$. Since $100 \lt 250 \le 1000$, discount is of $25$ rupees. Therefore, Chef needs to pay $250-25 = 225$ rupees.
 
 ## Solution
 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T10:56:12.283Z  
+**Submitted:** 2026-11-03T11:01:06.168Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -73,20 +65,25 @@ using namespace std;
 
 int main() {
 	// your code goes here
-        int n,r;
-        cin>>n;
-        while(n--){
-            int a,b,c;
-            cin>>a>>b>>c;
-            r=a+b+c;
-            if(r>1){
-                cout<<"Not now\n";
-            }
-            else{
-                cout<<"Water filling time\n";
-            }
+	int n;
+    cin>>n;
+    while(n--){
+        int a; 
+        cin>>a;
+        if(a<=100){
+            cout<<a<<"\n";
         }
-        return 0;
+        else if (a<=1000){
+            cout<<a-25<<"\n";
+        }
+        else if(a<=5000){
+            cout<<a-100<<"\n";
+        }
+        else{
+            cout<<a-500<<"\n";
+        }
+    }
+    return 0;
 }
 
 ```
