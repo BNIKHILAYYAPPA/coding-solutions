@@ -4,64 +4,55 @@
 
 ## Problem
 
-### Sugarcane Juice Business
+### Count the Notebooks
 
-While Alice was drinking sugarcane juice, she started wondering about the following facts:
+You know that $1$ kg of pulp can be used to make $1000$ pages and $1$ notebook consists of $100$ pages.
 
-- The juicer sells each glass of sugarcane juice for $50$ coins.
-- He spends $20\%$ of his total income on buying sugarcane.
-- He spends $20\%$ of his total income on buying salt and mint leaves.
-- He spends $30\%$ of his total income on shop rent.
-
-Alice wonders, what is the juicer's profit (in coins) when he sells $N$ glasses of sugarcane juice?
+Suppose a notebook factory receives $N$ kg of pulp, how many notebooks can be made from that?
 
 ### Input Format
-- The first line of input will contain an integer $T$ — the number of test cases. The description of $T$ test cases follows.
-- The first and only line of each test case contains an integer $N$, as described in the problem statement.
+- First line will contain $T$, the number of test cases. Then the test cases follow.
+- Each test case contains a single integer $N$ - the weight of the pulp the factory has (in kgs).
 ### Output Format
 
-For each test case, output on a new line the juicer's profit when he sells $N$ glasses of juice.
+For each test case, output the number of notebooks that can be made using $N$ kgs of pulp.
 
 ### Constraints
-- $1 \leq T \leq 1000$
-- $1 \leq N \leq 10^6$
+- $1 \leq T \leq 100$
+- $1 \leq N \leq 100$
 ### Sample 1:
 Input
 Output
 
 ```
-4
-2
-4
-5
+3
+1
+100
+50
+
+```
+
+```
 10
-
-```
-
-```
-30
-60
-75
-150
+1000
+500
 
 ```
 
 ### Explanation:
 
- **Test case $1$** : The total income is $50\times 2 = 100$ coins. The juicer spends $20$ coins on sugarcane, $20$ coins on salt and mint leaves and $30$ coins on rent. Thus, the profit is $100-(20+20+30) = 30$ coins.
+ **Test case-1:**  $1$ kg of pulp can be used to make $1000$ pages which can be used to make $10$ notebooks.
 
- **Test case $2$** : The total income is $50\times 4 = 200$ coins. The juicer spends $40$ coins on sugarcane, $40$ coins on salt and mint leaves and $60$ coins on rent. Thus, the profit is $200-(40+40+60) = 60$ coins.
+ **Test case-2:**  $100$ kg of pulp can be used to make $100000$ pages which can be used to make $1000$ notebooks.
 
- **Test case $3$** : The total income is $50\times 5 = 250$ coins. The juicer spends $50$ coins on sugarcane, $50$ coins on salt and mint leaves and $75$ coins on rent. Thus, the profit is $250-(50+50+75) = 75$ coins.
-
- **Test case $4$** : The total income is $50\times 10 = 500$ coins. The juicer spends $100$ coins on sugarcane, $100$ coins on salt and mint leaves and $150$ coins on rent. Thus, the profit is $500-(100+100+150) = 150$ coins.
+ **Test case-3:**  $50$ kg of pulp can be used to make $50000$ pages which can be used to make $500$ notebooks.
 
 ## Solution
 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T14:05:42.552Z  
+**Submitted:** 2026-11-03T14:07:34.403Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,7 +65,7 @@ int main() {
     while(n--){
         int a;
         cin>>a;
-        cout<<15*a<<"\n";
+        cout<<a*10<<"\n";
     }
     return 0;
 }
