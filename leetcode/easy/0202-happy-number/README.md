@@ -46,20 +46,17 @@ Output: false
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-11-04T11:28:18.492Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 7.6 MB (beats 99.77%)  
+**Submitted:** 2026-11-04T11:31:18.920Z  
 
 ```cpp
 class Solution {
 public:
     bool isHappy(int n) {
         bool res=false;
-        if(n==2||n==3){
-            return false;
-        }
-        if(n<9){
-            res=true;
+        if(n==1||n==7){
+            return true;
         }
         while(n>9&&n<pow(2,31)&&n!=1){
             int di,b=0;
@@ -69,7 +66,7 @@ public:
                 n=n/10;
             }
             n=b;
-            if(n==1){
+            if(n==1||n==7){
                 res=true;
             }        }
         return res;
