@@ -65,7 +65,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T06:22:36.908Z  
+**Submitted:** 2026-11-04T06:25:09.274Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -78,7 +78,7 @@ int main() {
      while(n--){
          int a,b,c;
          cin>>a>>b>>c;
-         if(c%b==0){
+         if(c%b==0&&a*b>=c){
              cout<<"YES\n";
          }
          else{
