@@ -1,0 +1,82 @@
+# Happy Number
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+Write an algorithm to determine if a number `n` is happy.
+
+A  **happy number**  is a number defined by the following process:
+
+- Starting with any positive integer, replace the number by the sum of the squares of its digits.
+- Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+- Those numbers for which this process ends in 1 are happy.
+
+Return `true`  *if*  `n`  *is a happy number, and*  `false`  *if not*.
+
+ 
+
+ **Example 1:** 
+
+```
+Input: n = 19
+Output: true
+Explanation:
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
+
+```
+
+ **Example 2:** 
+
+```
+Input: n = 2
+Output: false
+
+```
+
+ 
+
+ **Constraints:** 
+
+- 1 <= n <= 231 - 1
+
+## Solution
+
+**Language:** C++  
+**Runtime:** 0 ms  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-11-04T11:28:18.492Z  
+
+```cpp
+class Solution {
+public:
+    bool isHappy(int n) {
+        bool res=false;
+        if(n==2||n==3){
+            return false;
+        }
+        if(n<9){
+            res=true;
+        }
+        while(n>9&&n<pow(2,31)&&n!=1){
+            int di,b=0;
+            while(n!=0){
+                di=n%10;
+                b=b+di*di;
+                n=n/10;
+            }
+            n=b;
+            if(n==1){
+                res=true;
+            }        }
+        return res;
+    }
+};
+```
+
+---
+
+[View on LeetCode](https://leetcode.com/problems/happy-number/)
