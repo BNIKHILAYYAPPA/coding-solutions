@@ -58,7 +58,7 @@ Qualify
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T02:31:16.312Z  
+**Submitted:** 2026-11-04T02:35:58.585Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -69,13 +69,13 @@ int main() {
     int n;
     cin>>n;
     while(n--){
-        int a;
-        cin>>a;
-        if(a%4==0){
-            cout<<"Good\n";
+        int a,b,c;
+        cin>>a>>b>>c;
+        if(a<=(b*1+c*2)){
+            cout<<"Qualify\n";
         }
         else{
-            cout<<"Not Good\n";
+            cout<<"Not Qualify\n";
         }
     }
     return 0;
