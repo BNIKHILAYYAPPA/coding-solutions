@@ -58,12 +58,29 @@ Qualify
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T02:28:39.008Z  
+**Submitted:** 2026-11-04T02:31:16.312Z  
 
 ```c_cpp
-# cook your dish here
-#include<iostram>
-using a
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    while(n--){
+        int a;
+        cin>>a;
+        if(a%4==0){
+            cout<<"Good\n";
+        }
+        else{
+            cout<<"Not Good\n";
+        }
+    }
+    return 0;
+}
+
 ```
 
 ---
