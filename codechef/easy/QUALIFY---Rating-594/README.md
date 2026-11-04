@@ -58,7 +58,7 @@ Qualify
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T02:36:16.641Z  
+**Submitted:** 2026-11-04T02:37:24.050Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -75,7 +75,7 @@ int main() {
             cout<<"Qualify\n";
         }
         else{
-            cout<<"Not Qualify\n";
+            cout<<"NotQualify\n";
         }
     }
     return 0;
