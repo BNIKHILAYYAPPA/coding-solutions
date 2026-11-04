@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    while(n--){
+        int a,b;
+        cin>>a>>b;
+        if((a/10)*100 < (b/20)*100){
+            cout<<"SECOND\n";
+        }
+        else if((a/10)*100 > (b/20)*100){
+            cout<<"FIRST\n";
+        }
+        else{
+            cout<<"ANY\n";
+        }
+    }
+    return 0;
+}
