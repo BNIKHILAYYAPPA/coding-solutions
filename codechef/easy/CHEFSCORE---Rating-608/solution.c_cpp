@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    while(n--){
+        double a;
+        cin>>a;
+        cout<<ceil(a/4)<<"\n";
+    }
+    return 0;
+}
