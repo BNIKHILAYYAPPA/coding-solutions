@@ -12,7 +12,7 @@ int main() {
             cout<<"Qualify\n";
         }
         else{
-            cout<<"NotQualify\n";
+            cout<<"Not Qualify\n";
         }
     }
     return 0;
