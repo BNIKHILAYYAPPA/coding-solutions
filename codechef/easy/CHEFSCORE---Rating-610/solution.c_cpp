@@ -8,7 +8,7 @@ int main() {
      while(n--){
          int a,b,c;
          cin>>a>>b>>c;
-         if(c%b==0){
+         if(c%b==0&&a*b>=c){
              cout<<"YES\n";
          }
          else{
