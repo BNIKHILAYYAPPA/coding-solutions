@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin>>n;
+    while(n--){
+        int a;
+        cin>>a;
+        if(a<=10){
+            cout<<"Lower Double\n";
+        }
+        else if(a>10&&a<=15){
+            cout<<"Lower Single\n";
+        }
+        else if(a>15&&a<=25){
+            cout<<"Upper Double\n";
+        }
+        else{
+            cout<<"Upper Single\n";
+        }
+    }
+    return 0;
+}
